@@ -30,7 +30,7 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 16px;
     margin-bottom: 60px;
-    background-image: url("contents/images/squig8.jpg");
+   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -50,9 +50,22 @@ h1 {
 }
 
 .menu h2 {
-    font-size: 25px;
     text-align: center;
     color: black;
+    font-family:'open sans', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1rem;
+	letter-spacing: 2px;
+}
+
+h3 {
+	color: black;
+	font-family:'open sans', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2rem;
+	letter-spacing: 2px;
 }
 
 /*------------------------------------------------------------------
@@ -475,7 +488,7 @@ a:focus {
 }
 
 .navbar-light {
-    background-color: transparent;
+    background: transparent;
     border: 0;
 }
 
@@ -526,7 +539,7 @@ a:focus {
     background: transparent;
     height: 47px;
     line-height: 46px;
-    background-color: cyan;
+    background-image: linear-gradient(to bottom, #00CF00, #91D000, #CCCC04);
 }
 
 .cbp-item .btn:hover {
@@ -572,7 +585,7 @@ a:focus {
 } 
 
 .cbp-item-wrap {
-    background: pink;
+    background-color: white;
     transition: box-shadow .35s ease-out, transform .3s ease-out, opacity .2s ease-out;
     margin-left: 5px;
     margin-right: 10px;
@@ -759,7 +772,9 @@ pre {
 }
 
 #menu-links {
+    font-family: 'knewave', cursive;
     margin-bottom: 18px;
+    color: #CCCC04;
 }
 
 /*------------------------------------------------------------------
