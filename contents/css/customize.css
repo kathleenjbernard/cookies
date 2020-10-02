@@ -30,7 +30,6 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 16px;
     margin-bottom: 60px;
-   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -39,14 +38,28 @@ body {
     width: 100%;
 }
 
+#background-text-heading {
+    size: 200px;
+}
+
 h1 {
     font-family: 'knewave', cursive;
-    color: #CCCC04;
+    color: #00CF00;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     border-bottom: 1px dashed;
     padding: 0px 0px 10px 0px;
+}
+
+#menu-wrapper {
+    background-color: none;
+}
+
+.menu {
+    background-color: #fffbc4;
+    margin: 0;
+    padding: 0;
 }
 
 .menu h2 {
@@ -526,25 +539,27 @@ a:focus {
 }
 
 .cbp-item .btn {
-    width: 50%;
+    width: 100%;
+    font-family: 'open sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
     color: #fff;
     padding: 0;
     border: 0;
     margin: 0;
     transition: background .35s, color .2s;
     text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 1px;
+    font-size: 25px;
+    letter-spacing: -2px;
     border-radius: 0;
     background: transparent;
     height: 47px;
     line-height: 46px;
-    background-image: linear-gradient(to bottom, #00CF00, #91D000, #CCCC04);
+  
 }
 
 .cbp-item .btn:hover {
-    background-image: linear-gradient(to top, #CCCC04, #91D000);
-    color: #dfdfdf;
+    color: pink;
 }
 
 .cbp-l-project-details .btn.focus,
@@ -587,14 +602,46 @@ a:focus {
 .cbp-item-wrap {
     background-color: white;
     transition: box-shadow .35s ease-out, transform .3s ease-out, opacity .2s ease-out;
-    margin-left: 5px;
-    margin-right: 10px;
+    margin: 20px;
 }
 
 .cbp-item-wrap:hover {
-    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 20px transparent;
     transform: translate(0, -7px);
     opacity: 1 !important;
+    animation-name: colorShift;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+@keyframes colorShift {
+    0% {
+        outline: 20px solid #faa96c;
+        box-shadow: 10px 0px 40px 15px #faa96c;
+        box-shadow: -20px 0px 50px 15px #faa96c;
+    }
+    25% {
+        outline: 20px solid #89da89;
+        box-shadow: 20px 10px 50px 15px #89da89;
+        box-shadow: -10px 10px 60px 15px #89da89;
+    }
+    50% {
+        outline: 20px solid #90c7d8;
+        box-shadow: 10px 20px 40px 15px #90c7d8;
+        box-shadow: 0px 20px 50px 15px #90c7d8;
+    }
+    75% {
+        outline: 20px solid #d890bc;
+        box-shadow: 0px -10px 30px 15px #d890bc;
+        box-shadow: 10px 10px 60px 15px #d890bc;
+    }
+    100% {
+        outline: 20px solid #d7d890;
+        box-shadow: -10px -20px 40px 15px #d7d890;
+        box-shadow: 20px 0px 50px 15px #d7d890;
+    }
 }
 
 .cbp .cbp-item {
